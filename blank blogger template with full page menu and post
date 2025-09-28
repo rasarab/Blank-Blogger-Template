@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<html xmlns='http://www.w3.org/1999/xhtml' 
+      xmlns:b='http://www.google.com/2005/gml/b' 
+      xmlns:data='http://www.google.com/2005/gml/data' 
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+ <head>
+  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+  <b:if cond='data:blog.isMobile'> 
+   <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+  <b:else/> 
+   <meta content='width=1100' name='viewport'/> 
+  </b:if> 
+
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+
+  <b:skin><![CDATA[
+    body { 
+     font: $(body.font); 
+     color: $(body.text.color); 
+     background: $(body.background); 
+     padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread); 
+     $(body.background.override) margin: 0; 
+     padding: 0; 
+    }
+    nav.menu {
+      background:#333;
+      padding:10px;
+      text-align:center;
+    }
+    nav.menu ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    nav.menu ul li {
+      display:inline-block;
+      margin:0 15px;
+    }
+    nav.menu ul li a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav.menu ul li a:hover {
+      color:#ffcc00;
+    }
+    /* Judul artikel biar center */
+    .post-title, .post-title a {
+      text-align:center;
+      display:block;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  ]]></b:skin>
+ </head>
+
+ <body>
+  
+  <!-- Menu Navigasi -->
+  <nav class='menu'>
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li><a href='/p/about.html'>About</a></li>
+      <li><a href='/p/contact.html'>Contact</a></li>
+      <li><a href='/search/label/Tutorial'>Tutorial</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Bagian Utama -->
+  <b:section class='main' id='main' showaddelement='yes'>
+    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+  </b:section>
+
+  <!-- Credits -->
+  <center><a href="//rasarab.my.id">Template By rasarab</a></center>
+ </body>
+</html>
